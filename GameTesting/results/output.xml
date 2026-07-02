@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.10 on win32)" generated="2026-07-02T00:32:05.009780" rpa="false" schemaversion="5">
+<suite id="s1" name="Atdd Rules" source="D:\GameTesting\tests_robot\atdd_rules.robot">
+<test id="s1-t1" name="Criterio Aceptacion 1: Restriccion Estricta Modalidad 1v1" line="5">
+<kw name="Inicializar Motor Del Juego" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.095952" elapsed="0.189808"/>
+</kw>
+<kw name="Verificar Cantidad De Jugadores Activos" owner="GameLibrary">
+<arg>2</arg>
+<status status="PASS" start="2026-07-02T00:32:05.286765" elapsed="0.000000"/>
+</kw>
+<doc>Valida que la partida inicialice estrictamente con 2 competidores operacionales.</doc>
+<status status="PASS" start="2026-07-02T00:32:05.095952" elapsed="0.190813"/>
+</test>
+<test id="s1-t2" name="Criterio Aceptacion 2: Rotacion Ciclica Obligatoria de Turnos" line="10">
+<kw name="Inicializar Motor Del Juego" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.287761" elapsed="0.026133"/>
+</kw>
+<kw name="Forzar Turno Actual" owner="GameLibrary">
+<arg>0</arg>
+<status status="PASS" start="2026-07-02T00:32:05.313894" elapsed="0.001007"/>
+</kw>
+<kw name="Simular Cambio De Turno Modular" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.314901" elapsed="0.000000"/>
+</kw>
+<kw name="El Turno Debe Pertenecer Al Jugador" owner="GameLibrary">
+<arg>1</arg>
+<status status="PASS" start="2026-07-02T00:32:05.314901" elapsed="0.000000"/>
+</kw>
+<doc>Verifica que al concluir un evento, el control se transfiera de forma infalible al rival.</doc>
+<status status="PASS" start="2026-07-02T00:32:05.287761" elapsed="0.027140"/>
+</test>
+<test id="s1-t3" name="Criterio Aceptacion 3: Regeneracion Dinamica del Viento por Turno" line="17">
+<kw name="Inicializar Motor Del Juego" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.315906" elapsed="0.027810"/>
+</kw>
+<kw name="Registrar Viento Actual De La Partida" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.344725" elapsed="0.000000"/>
+</kw>
+<kw name="Simular Actualizacion Climatica Del Entorno" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.344725" elapsed="0.000000"/>
+</kw>
+<kw name="El Viento Actual Debe Haber Cambiado" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.344725" elapsed="0.000999"/>
+</kw>
+<doc>Valida la regla de negocio de que el viento cambie de intensidad al rotar el control.</doc>
+<status status="PASS" start="2026-07-02T00:32:05.315906" elapsed="0.029818"/>
+</test>
+<test id="s1-t4" name="Criterio Aceptacion 4: Penalizacion Absoluta por Caida al Vacio" line="24">
+<kw name="Inicializar Motor Del Juego" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.346722" elapsed="0.026766"/>
+</kw>
+<kw name="Forzar Caida Al Vacio Del Jugador Uno" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.374007" elapsed="0.000000"/>
+</kw>
+<kw name="Verificar Que El Jugador Uno Este Muerto" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.374007" elapsed="0.000000"/>
+</kw>
+<doc>Verifica el criterio de aceptación de muerte instantánea al salir de los límites inferiores.</doc>
+<status status="PASS" start="2026-07-02T00:32:05.345724" elapsed="0.028283"/>
+</test>
+<test id="s1-t5" name="Criterio Aceptacion 5: Gatillado Automatico por Potencia Maxima" line="30">
+<kw name="Inicializar Motor Del Juego" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.375014" elapsed="0.022048"/>
+</kw>
+<kw name="Cargar Barra De Potencia Al Maximo" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.397062" elapsed="0.000000"/>
+</kw>
+<kw name="El Sistema Debe Gatillar El Disparo Automaticamente" owner="GameLibrary">
+<status status="PASS" start="2026-07-02T00:32:05.398059" elapsed="0.000000"/>
+</kw>
+<doc>Asegura que el juego dispare inmediatamente al alcanzar el 100% de fuerza.</doc>
+<status status="PASS" start="2026-07-02T00:32:05.375014" elapsed="0.023045"/>
+</test>
+<status status="PASS" start="2026-07-02T00:32:05.012286" elapsed="0.385773"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Atdd Rules" id="s1" pass="5" fail="0" skip="0">Atdd Rules</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
